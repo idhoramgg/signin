@@ -72,7 +72,7 @@ export default function SignInSide(props) {
       JSON.parse(localStorage.getItem("userData")).password === value.password
     ) {
       event.preventDefault();
-      props.history.push("/dashboard");
+      props.history.push("/api");
     }else {
       alert(`passwor atau email salah`);
     }

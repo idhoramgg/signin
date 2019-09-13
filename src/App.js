@@ -19,7 +19,7 @@ function App() {
               <Link to='/signup'>Sign Up</Link>
             </li>
             <li>
-              <Link to='/api'>Dashboard</Link>
+              <Link to='/api'>Api</Link>
             </li>
           </ul>
         </nav>
