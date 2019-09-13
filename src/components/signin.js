@@ -73,6 +73,8 @@ export default function SignInSide(props) {
     ) {
       event.preventDefault();
       props.history.push("/api");
+      localStorage.setItem('login',JSON.stringify(value))
+      window.location.reload();
     }else {
       alert(`passwor atau email salah`);
     }
