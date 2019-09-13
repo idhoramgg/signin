@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import SignInSide from './components/signin';
 import SignUp from './components/signup';
-import Api from './components/api';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Reqres } from './components/reqres';
 
@@ -27,7 +26,7 @@ function App() {
 
         <Route path='/signin' exact component={SignInSide} />
         <Route path='/signup' component={SignUp} />
-        <Route path='/api' component={Regres} />
+        <Route path='/api' component={Reqres} />
       </div>
     </Router>
 
