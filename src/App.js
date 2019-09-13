@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import SimpleTabs from './components/tabs'
 import SignInSide from './components/signin';
 import SignUp from './components/signup';
 import Api from './components/api';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Reqres } from './components/reqres';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
 
         <Route path='/signin' exact component={SignInSide} />
         <Route path='/signup' component={SignUp} />
-        <Route path='/api' component={SimpleTabs} />
+        <Route path='/api' component={Regres} />
       </div>
     </Router>
 
