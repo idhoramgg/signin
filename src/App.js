@@ -2,16 +2,15 @@ import React , {Fragment} from "react";
 import "./App.css";
 import SignInSide from "./components/signin";
 import SignUp from "./components/signup";
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Reqres } from "./components/reqres";
 
-function App(props) {
+function App() {
   function logOut(){
 
     localStorage.removeItem('login');
     // props.history.push('/signin')
-    console.log(props);
-    // window.location.reload();
+    window.location = '/signin'
     
   }
   return (
@@ -29,7 +28,9 @@ function App(props) {
                   <li>
                     <Link to="/api">Api</Link>
                   </li>
-                  <li onClick = {logOut} >Logout</li>
+                  <li onClick = {logOut} >
+                    <Link to="/signin">
+                    </Link>Logout</li>
                 </Fragment>
               ) : (
                 <li>
