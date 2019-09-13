@@ -23,7 +23,7 @@ export class Reqres extends React.Component {
       <h1>Nama dan Email Karyawan</h1>
         {this.state.persons.length > 0 && this.state.persons.map(person => 
         <li> 
-        <div className="card">Nama : {person.first_name} {person.last_name} <br/> Email : {person.email} <img src={require(`${person.image}`)} alt=""/></div> <hr/> 
+        <div className="card">Nama : {person.first_name} {person.last_name} <br/> Email : {person.email}</div> <hr/> 
         </li>
         )}
       </ol>

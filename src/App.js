@@ -2,13 +2,17 @@ import React , {Fragment} from "react";
 import "./App.css";
 import SignInSide from "./components/signin";
 import SignUp from "./components/signup";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import { Reqres } from "./components/reqres";
 
-function App() {
+function App(props) {
   function logOut(){
-    localStorage.removeItem('login'); 
-    window.location.reload();
+
+    localStorage.removeItem('login');
+    // props.history.push('/signin')
+    console.log(props);
+    // window.location.reload();
+    
   }
   return (
     <div>
@@ -38,8 +42,10 @@ function App() {
           <Route path="/signin" exact component={SignInSide} />
           <Route path="/signup" component={SignUp} />
           <Route path="/api" component={Reqres} />
+          {/* <Route path="/logout" component ={()=> <Redirect to ="/signin" />} */}
+
         </div>
-      </Router>
+        </Router>
     </div>
   );
 }
