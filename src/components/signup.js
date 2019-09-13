@@ -66,6 +66,7 @@ export default function SignUp(props) {
       alert('Please fill in the form')
     }else{
       props.history.push("/signin")
+      localStorage.setItem('userData',JSON.stringify(value))
     }
     console.log(value)
     console.log(props)
